@@ -72,10 +72,22 @@ def load_model(model):
 @app.route('/admin/edit/<string:model>/<int:id>', methods=['PUT'])
 # @jwt_required()
 def edit_by_modelID(model,id):
-    return jsonify({'msg': 'editar modelo?',
+    return jsonify({'msg': 'editar modelo? que modelo?',
+                    'modelo': model,
+                    'id': id})
+
+### Delete <model> <id> ###
+@app.route('/admin/delete/<string:model>/<int:id>', methods=['DELETE'])
+# @jwt_required()
+def delete_by_modelID(model, id):
+    return jsonify({'msg': 'creo que esta ruta borra un post usuario comentario o hashtag (model)',
                     'modelo': model,
                     'id': id})
 
 
 
 app.run('0.0.0.0')
+
+### tiene que tener likes, y conversacion o chat entre usuarios. ver funcionalidad de imagenes y videos.. 
+### buscar api de imagenes chats users comentarios.. etc para cuentas fake
+
