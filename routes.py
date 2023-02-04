@@ -68,7 +68,7 @@ def load_model(model):
     return jsonify({'msg': 'esta ruta carga los modelos?',
                     'modelo':model})
 
-        ### Edit <model> <id> ###
+ ####### Edit <model> <id> #######
 @app.route('/admin/edit/<string:model>/<int:id>', methods=['PUT'])
 # @jwt_required()
 def edit_by_modelID(model,id):
