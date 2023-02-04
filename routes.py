@@ -69,6 +69,7 @@ def load_model(model):
                     'modelo':model})
 
  ####### Edit <model> <id> #######
+
 @app.route('/admin/edit/<string:model>/<int:id>', methods=['PUT'])
 # @jwt_required()
 def edit_by_modelID(model,id):
@@ -76,7 +77,8 @@ def edit_by_modelID(model,id):
                     'modelo': model,
                     'id': id})
 
-### Delete <model> <id> ###
+####### Delete <model> <id> ##########
+
 @app.route('/admin/delete/<string:model>/<int:id>', methods=['DELETE'])
 # @jwt_required()
 def delete_by_modelID(model, id):
